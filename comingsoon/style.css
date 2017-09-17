@@ -21,6 +21,78 @@ DJ DESIGN SITE
     1. Global CSS
 ====================================== */
 
+.load-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.99;
+    background: url("https://source.unsplash.com/collection/1163444/1600x900") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    transition: all 2s;
+}
+
+/* LOADING CSS */
+
+.load-wrapper {
+      height: 50px;
+      margin-top: calc(50vh - 25px);
+      margin-left: calc(50vw - 100px);
+      width: 210px;
+      position: absolute;
+      z-index: 3;
+    }
+.load-circle {
+  border-radius: 50%;
+  border: 3px #0a0a0a solid;
+  float: left;
+  height: 50px;
+  margin: 0 5px;
+  width: 50px;
+}
+  .circle-1 {
+    animation: move 1s ease-in-out infinite;
+  }
+  .circle-1a {
+    animation: fade 1s ease-in-out infinite;
+  }
+  @keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .circle-2 {
+    animation: move 1s ease-in-out infinite;
+  }
+  @keyframes move {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(60px);}
+  }
+  .circle-1a {
+    margin-left: -55px;
+    opacity: 0;
+  }
+  .circle-3 {
+    animation: circle-3 1s ease-in-out infinite;
+    opacity: 1;
+  }
+  @keyframes circle-3 {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  .load-wrapper h1 {
+    clear: both;
+    text-align: center;
+  }
+
+/* LOADING END */
+
+.hide {
+    display: none;
+}
+
 body
 {
     font-family: 'Lato', sans-serif;
@@ -45,7 +117,7 @@ body:before {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    transition: all 3s;
+    transition: all 2s;
 }
 
 .body-scroll:before {
