@@ -21,13 +21,49 @@ DJ DESIGN SITE
     1. Global CSS
 ====================================== */
 
+#home-slide1:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(images/pitchup1a.jpg) center center / cover no-repeat;
+    visibility: visible;
+}
+
+#home-slide2:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(images/habito1b.png) center center / cover no-repeat;
+    visibility: visible;
+}
+
+.home-slides-overlay {
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.tp-leftarrow, .tp-rightarrow {
+    display: none !important;
+}
 .load-bg {
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     opacity: 0.99;
-    background: url("https://source.unsplash.com/collection/1163444/1600x900") no-repeat center center fixed; 
+    background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -35,62 +71,85 @@ DJ DESIGN SITE
     transition: all 2s;
 }
 
-/* LOADING CSS */
+/* loading bar */
 
-.load-wrapper {
-      height: 50px;
-      margin-top: calc(50vh - 25px);
-      margin-left: calc(50vw - 100px);
-      width: 210px;
-      position: absolute;
-      z-index: 3;
-    }
-.load-circle {
-  border-radius: 50%;
-  border: 3px #0a0a0a solid;
-  float: left;
-  height: 50px;
-  margin: 0 5px;
-  width: 50px;
+.load-bar {
+  position: fixed;
+  width: 100%;
+  height: 10px;
+  background-color: #fdba2c;
+  z-index: 3;
 }
-  .circle-1 {
-    animation: move 1s ease-in-out infinite;
-  }
-  .circle-1a {
-    animation: fade 1s ease-in-out infinite;
-  }
-  @keyframes fade {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-  }
-  .circle-2 {
-    animation: move 1s ease-in-out infinite;
-  }
-  @keyframes move {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(60px);}
-  }
-  .circle-1a {
-    margin-left: -55px;
-    opacity: 0;
-  }
-  .circle-3 {
-    animation: circle-3 1s ease-in-out infinite;
-    opacity: 1;
-  }
-  @keyframes circle-3 {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-  }
-  .load-wrapper h1 {
-    clear: both;
-    text-align: center;
-  }
 
+.bar {
+  content: "";
+  display: inline;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 50%;
+  text-align: center;
+}
+
+.bar:nth-child(1) {
+  background-color: #da4733;
+  -webkit-animation: loading 3s linear infinite;
+          animation: loading 3s linear infinite;
+}
+
+.bar:nth-child(2) {
+  background-color: #3b78e7;
+  -webkit-animation: loading 3s linear 1s infinite;
+          animation: loading 3s linear 1s infinite;
+}
+
+.bar:nth-child(3) {
+  background-color: #fdba2c;
+  -webkit-animation: loading 3s linear 2s infinite;
+          animation: loading 3s linear 2s infinite;
+}
+
+@-webkit-keyframes loading {
+  from {
+    left: 50%;
+    width: 0;
+    z-index: 100;
+  }
+  33.3333% {
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
+
+@keyframes loading {
+  from {
+    left: 50%;
+    width: 0;
+    z-index: 100;
+  }
+  33.3333% {
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
 /* LOADING END */
 
 .hide {
     display: none;
+}
+
+.hide-imp {
+    display: none !important;
 }
 
 body
@@ -104,15 +163,14 @@ body
     letter-spacing: 0.5px;
 }
 
-body:before {
-    content: '';
+.home-bg {
     position: fixed;
     height: 100%;
     width: 100%;
     z-index: -1;
     opacity: 0.2;
     background-color: #f4f4f1;
-    background: url("https://source.unsplash.com/collection/1163444/1600x900") no-repeat center center fixed; 
+    background: no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1932,4 +1990,10 @@ li.social-footer a:first-child
         padding-top: 30px;
     }
 
+}
+
+@media screen and (max-width: 489px) {  
+    .content-1170 .entry-title {
+        display: none !important;
+    }
 }
