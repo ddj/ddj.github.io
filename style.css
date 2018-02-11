@@ -797,7 +797,7 @@ body a:hover
 
 .page-header-image + .page-content-wrapper.content-1170
 {
-    margin-top: -500px;
+    margin-top: -100px;
     width: 970px;
 }
 
@@ -831,6 +831,25 @@ body a:hover
 {
     padding-bottom: 0;
 }
+
+#djgrid {
+    max-width: 800px;
+}
+
+@media screen and (max-width: 1020px) {
+    #djgrid {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #djgrid {
+        display: none;
+    }
+}   
+
+
 
 
 /* ===================================
@@ -1680,12 +1699,19 @@ li.social-footer a:first-child
     .page-header-image + .page-content-wrapper.content-1170
     {
         margin-top: 0;
-        margin-top: -500px;
+        margin-top: -360px;
     }
 
 }
 
 @media screen and (max-width: 1020px) {  
+
+    
+
+    .page-header-image + .page-content-wrapper.content-1170
+    {
+        margin-top: 0;
+    }
 
     .header-holder
     {
