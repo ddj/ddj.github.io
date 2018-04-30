@@ -21,6 +21,19 @@ DJ DESIGN SITE
     1. Global CSS
 ====================================== */
 
+#home-slide0:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e1c8fe0c9197d66232511525bfd1cc82&auto=format&fit=crop&w=1700&q=80) center center / cover no-repeat;
+    visibility: visible;
+}
+
 #home-slide1:before {
     content: '';
     height: 100%;
@@ -62,12 +75,13 @@ DJ DESIGN SITE
     height: 100%;
     width: 100%;
     z-index: 3;
-    opacity: 0.99;
+    opacity: 1;
     background: no-repeat center center fixed; 
-    -webkit-background-size: cover;
+        -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    //background-repeat: repeat-x;
     transition: all 2s;
 }
 
@@ -168,7 +182,7 @@ body
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.07;
     background-color: #f4f4f1;
     background: no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -797,7 +811,7 @@ body a:hover
 
 .page-header-image + .page-content-wrapper.content-1170
 {
-    margin-top: -100px;
+    //margin-top: -100px;
     width: 970px;
 }
 
