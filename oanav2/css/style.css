@@ -21,7 +21,7 @@ Assigned to: ThemeForest
 /*--------- Body Strat -------*/
 body {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 1.5;
 	color: #717171;
 	background-color:#ffffff;
@@ -54,6 +54,11 @@ input, textarea, select, button {
 	outline: none;
 	box-shadow:none;
 }
+
+.hide {
+    display: none;
+}
+
 input:focus, textarea:focus, select:focus, button:focus {
 	outline: none;
 	box-shadow:none;
@@ -196,7 +201,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     position: absolute;
     right: 0;
     bottom: -10px;
-	color:#f6483b;
+	color:#209aa1;
     font-weight: 500;
 }
 .prt_heading_wrapper_2{
@@ -220,8 +225,8 @@ input:focus, textarea:focus, select:focus, button:focus {
     display: inline-block;
 	text-align:center;
 	text-transform:capitalize;
-	background-color:#f6483b;
-	border:1px solid #f6483b;
+	background-color:#209aa1;
+	border:1px solid #209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -229,9 +234,9 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_btn:hover, .prt_btn:focus{
-    color: #f6483b;
+    color: #209aa1;
     background-color: #ffffff;
-	border:1px solid #f6483b;
+	border:1px solid #209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -256,7 +261,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 	background-color: #000000;
 }
 .prt_home_wrapper{
-	background-image:url(../images/content/banner_bg.jpg);
+	background-image:url(../images/content/banner_bg2.png);
 	background-position: center center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -270,12 +275,12 @@ input:focus, textarea:focus, select:focus, button:focus {
 	font-size:150px;
 	color: #ffffff;
 	font-weight:bold;
-	background: url(../images/content/banner_text_bg.jpg) no-repeat;
+	background: url(../images/content/banner_text_bg2.png) no-repeat;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     background-size: cover;
 }
-.prt_logo_wrapper img{
+.prt_logo_wrapper img {
     position: fixed;
     left: 50px;
     top: 50px;
@@ -285,6 +290,14 @@ input:focus, textarea:focus, select:focus, button:focus {
   -o-animation: rotate 2s linear infinite;
   -ms-animation: rotate 2s linear infinite;
   animation: rotate 2s linear infinite;
+}
+
+#prt_close_tab {
+    -webkit-animation: rotate 2s linear infinite;
+  -moz-animation: rotate 2s linear infinite;
+  -o-animation: rotate 2s linear infinite;
+  -ms-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;    
 }
 @-webkit-keyframes rotate {
   100% {
@@ -457,7 +470,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .prt_about_learnbox_right:hover:after{
 	background-color: #ffffff;
-    border: 3px solid #f6483b;
+    border: 3px solid #209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -495,7 +508,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .prt_about_learnbox_left:hover:after{
 	background-color: #ffffff;
-    border: 3px solid #f6483b;
+    border: 3px solid #209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -503,7 +516,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_about_learnbox_right:hover .prt_about_learnbox_year h1{
-	color:#f6483b;
+	color:#209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -511,7 +524,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_about_learnbox_left:hover .prt_about_learnbox_year h1{
-	color:#f6483b;
+	color:#209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -582,6 +595,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 	display:inline-block;
 	width:100%;
 	color:#ffffff;
+    color: #209aa1;
 	text-transform:capitalize;
 	margin-bottom:10px;
 }
@@ -633,7 +647,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_about_experiencebox:hover .prt_about_experience_year h1{
-	color:#f6483b;
+	color:#209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -893,7 +907,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_contact_details_box p a:hover{
-	color:#f6483b;
+	color:#209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1114,7 +1128,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_counter_box p{
     font-size: 18px;
     margin-left: 80px;
-    color: #f6483b;
+    color: #209aa1;
 }
 .circles-text {
 	font-size: 36px !important;
@@ -1229,7 +1243,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 .prt_portfolio_box a{
 	display:inline-block;
 	width:100%;
-	margin-bottom:30px;
+	//margin-bottom:30px;
 	text-align:center;
 }
 .prt_portfolio_img{
@@ -1302,7 +1316,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .prt_portfolio_text{
 	position:absolute;
-	bottom:-111px;
+	bottom:-211px;
 	left:0px;
 	width:100%;
 	text-align:left;
@@ -1328,7 +1342,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 /*---------- Footer css Start -------*/
 .prt_footer_wrapper{
 	background-color:#f5f5f5;
-	margin-top:115px;
+	//margin-top:115px;
 }
 .prt_footer_wrapper p{
     display: inline-block;
@@ -1339,7 +1353,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     padding-top: 5px;
 }
 .prt_footer_wrapper p a{
-	color:#f6483b;
+	color:#209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1347,7 +1361,7 @@ input:focus, textarea:focus, select:focus, button:focus {
     transition: all 0.3s;
 }
 .prt_footer_wrapper p a:hover{
-	color:#f6483b;
+	color:#209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1388,7 +1402,7 @@ input:focus, textarea:focus, select:focus, button:focus {
 }
 .prt_footer_wrapper ul li a:hover{
 	color:#ffffff;
-	background-color:#f6483b;
+	background-color:#209aa1;
 	-webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -1402,6 +1416,16 @@ input:focus, textarea:focus, select:focus, button:focus {
     padding-left: 50px;
 }
 }
+
+@media (max-width: 991px){
+    .mobile_logo {
+        display: block !important;
+    }
+    .prt_home_wrapper{
+        background-image: none !important;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 991px) {
 .prt_profile_slider {
     padding-top: 0px;
