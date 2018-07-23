@@ -223,11 +223,12 @@ DJ DESIGN SITE
 
 @media screen and (max-width: 413px) {
     #home-intro h1 {
-        font-size: 1.6em;
+        font-size: 1.4em;
         line-height: 1.7em;
     }
     #home-intro h2 {
         font-size: 1.4em;
+        line-height: 1.6em;
     }
 }
 
