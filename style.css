@@ -20,6 +20,218 @@ DJ DESIGN SITE
 /* ===================================
     1. Global CSS
 ====================================== */
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+#home-intro {
+    height: 100vh;
+    //background: rgba(0,0,0,.8);
+}
+#home-intro:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://images.unsplash.com/photo-1505562130589-9879683e72da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94f59c798cc667c7966bf41e7f5144d3&auto=format&fit=crop&w=2550&q=80) center 65% / cover no-repeat;
+    z-index: -1;
+    visibility: visible;
+    //filter: blur(5px) grayscale(70%);
+}
+
+@media screen and (min-width: 1650px) {
+    #home-intro:before {
+        background: url(https://images.unsplash.com/photo-1505562130589-9879683e72da?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94f59c798cc667c7966bf41e7f5144d3&auto=format&fit=crop&w=2550&q=80) center 45% / cover no-repeat;
+    }   
+}
+
+#home-intro .text-wrap {
+    margin-left: 17%;
+    margin-right: 17%;
+    color: white;
+}
+#home-intro h1 {
+    font-size: 5.5em;
+    line-height: 1.35em;
+    font-weight: 800;
+    font-family: 'Rock Salt', cursive !important;
+}
+#home-intro z {
+    color: #27EFA1;
+}
+#home-intro b {
+    font-weight: 800 !important;
+}
+#home-intro t {
+    color: transparent;
+}
+#home-intro h2 {
+    font-size: 3em;
+    line-height: 1.5em;
+    font-weight: 400;
+    color: rgb(80,80,80);
+}
+
+#home-intro top, #home-intro bottom {
+    height: 50vh;
+    display: flex;
+    align-items: center; 
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.scroll-icon-container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  bottom: 7vh;
+  left: 7vh;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+    #home-intro .text-wrap {
+        margin-left: 10%;
+        margin-right: 10%;
+    }  
+    #home-intro h1 {
+        font-size: 5em;
+        line-height: 1.4em;
+        font-weight: 800;
+    }
+    #home-intro h2 {
+        line-height: 1.7em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    #home-intro h1 {
+        font-size: 4em;
+    }
+    #home-intro h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    #home-intro h1 {
+        font-size: 3.5em;
+    }
+    #home-intro h2 {
+        font-size: 2em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    #home-intro h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    #home-intro h1 {
+        font-size: 2.8em;
+    }
+    #home-intro h2 {
+        font-size: 1.7em;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #home-intro h1 {
+        font-size: 2.5em;
+    }
+    #home-intro h2 {
+        font-size: 1.5em;
+        line-height: 2.5em;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #home-intro h1 {
+        font-size: 2em;
+        line-height: 1.7em;
+    }
+    #home-intro h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    #home-intro h1 {
+        font-size: 1.8em;
+        line-height: 1.7em;
+    }
+    #home-intro h2 {
+        font-size: 1.5em;
+    }
+}
+
+
 
 #home-slide0:before {
     content: '';
