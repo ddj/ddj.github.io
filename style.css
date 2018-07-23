@@ -53,7 +53,7 @@ DJ DESIGN SITE
 }
 #home-intro h1 {
     font-size: 5.5em;
-    line-height: 1.35em;
+    line-height: 1.45em;
     font-weight: 800;
     font-family: 'Rock Salt', cursive !important;
 }
@@ -854,6 +854,7 @@ body a:hover
     letter-spacing: 5px;
     line-height: 22px;
     text-transform: uppercase;
+    font-family: 'Rock Salt', cursive !important;
 }
 
 .entry-info ul
@@ -906,7 +907,7 @@ body a:hover
 
 .blog-item-holder h2.entry-title
 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lato';
     font-weight: 400;
     font-size: 35px;
     line-height: 44px;        
