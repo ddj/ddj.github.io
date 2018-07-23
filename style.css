@@ -223,11 +223,11 @@ DJ DESIGN SITE
 
 @media screen and (max-width: 413px) {
     #home-intro h1 {
-        font-size: 1.4em;
+        font-size: 1.2em;
         line-height: 1.7em;
     }
     #home-intro h2 {
-        font-size: 1.4em;
+        font-size: 1.35em;
         line-height: 1.6em;
     }
 }
@@ -290,7 +290,7 @@ DJ DESIGN SITE
     z-index: 3;
     opacity: 1;
     background: no-repeat center center fixed; 
-        -webkit-background-size: cover;
+    -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
