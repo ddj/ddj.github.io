@@ -73,7 +73,7 @@ DJ DESIGN SITE
     color: rgb(80,80,80);
 }
 
-#home-intro top, #home-intro bottom {
+#home-intro top, #home-intro bottom, #home-intro bottomMobile {
     height: 50vh;
     display: flex;
     align-items: center; 
@@ -206,8 +206,50 @@ DJ DESIGN SITE
         font-size: 2.5em;
     }
     #home-intro h2 {
-        font-size: 1.5em;
-        line-height: 2.5em;
+        text-align: center;
+        font-size: 1.6em;
+        line-height: 1.5em;
+    }
+    #home-intro {
+        height: 150vh;
+    }
+    #home-intro:before {
+        height: 150%;        
+    }
+    #home-intro top, #home-intro bottom, #home-intro bottomMobile {
+        height: 75vh;
+    }
+    #home-intro bottom {
+        display: none;
+    }
+    #home-intro bottomMobile {
+        display: flex;
+    }
+    #home-intro bottomMobile m {
+        display: block;
+        clear: both;
+        line-height: 1;
+    }
+    #home-intro bottomMobile i {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (min-width: 541px) {
+    #home-intro bottomMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 425px) {
+    #home-intro {
+        height: 200vh;
+    }
+    #home-intro:before {
+        height: 200%;        
+    }
+    #home-intro top, #home-intro bottom, #home-intro bottomMobile {
+        height: 100vh;
     }
 }
 
@@ -225,8 +267,8 @@ DJ DESIGN SITE
         line-height: 1.7em;
     }
     #home-intro h2 {
-        font-size: 1.3em;
-        line-height: 3em;
+        //font-size: 1.3em;
+        //line-height: 3em;
     }
 }
 
@@ -240,8 +282,8 @@ DJ DESIGN SITE
         margin-right: 5%;
     }
     #home-intro h2 {
-        font-size: 1.2em;
-        line-height: 2.5em;
+        //font-size: 1.2em;
+        //line-height: 2.5em;
     }
 }
 
@@ -2224,6 +2266,10 @@ li.social-footer a:first-child
         margin-bottom: 70px;
     }
 
+    .insight-below {
+        margin-top: 50px !important;
+    }
+
     .blog-item-holder.has-post-thumbnail .entry-holder
     {
         width: inherit;
@@ -2262,6 +2308,6 @@ li.social-footer a:first-child
 
 @media screen and (max-width: 489px) {  
     .content-1170 .entry-title {
-        display: none !important;
+        //display: none !important;
     }
 }
