@@ -65,22 +65,63 @@
 		<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
 
 		<style type="text/css">
-			.parallax-window .parallax-showcase-content, .parallax-window .bg-blind {
+			.parallax-window .parallax-showcase-content {
 				opacity: 0;
 				transition: opacity 0.7s ease-in-out;
 			}
-
-			.parallax-window .bg-blinds {
-				position: absolute;
-				background: rgba(0,0,0,0.2);
-				width: 100%;
-				height: 100%;
-				height: 100vh;
-				top: 0;
-				left: 0;
-			}
-			.parallax-window:hover .parallax-showcase-content, .parallax-window:hover .bg-blind {
+			.parallax-window:hover .parallax-showcase-content {
 				opacity: 1;
+			}
+
+			.zulu-title {
+				color: #00c9ca !important;
+			}
+			.zulu-btn {
+				border: 2px solid #00c9ca !important;
+				color: #00c9ca !important;
+			}
+			.zulu-btn:hover {
+				background: #00c9ca !important;
+			}
+
+			.pitchup-title {
+				color: #ff8a12 !important;
+			}
+			.pitchup-btn {
+				border: 2px solid #ff8a12 !important;
+				color: #ff8a12 !important;
+			}
+			.pitchup-btn:hover {
+				background: #ff8a12 !important;
+			}
+
+			.connect-title {
+				color: #00B0B9 !important;
+			}
+			.connect-btn {
+				border: 2px solid #00B0B9 !important;
+				color: #00B0B9 !important;
+			}
+			.connect-btn:hover {
+				background: #00B0B9 !important;
+			}
+
+			.cs-title {
+				color: #fff !important;
+			}
+			.cs-btn {
+				border: 2px solid #fff !important;
+				color: #fff !important;
+			}
+			.cs-btn:hover {
+				background: #fff !important;
+			}
+
+			.a-btn {
+				background: transparent !important;
+			}
+			.a-btn:hover {
+				color: white !important;
 			}
 
 			.parallax-window:before {
@@ -88,16 +129,22 @@
 				position: absolute;
 				width: 100%;
 				height: 100vh;
-				top: 0;
+				top: 50px;
 				left: 0;
-				background: rgba(0,0,0,0.2);
+				background: rgba(0,0,0,0.6);
+				//background: rgba(255,255,255,0.7);
 				opacity: 0;
 				transition: opacity 0.7s ease-in-out;
 			}
-
+			.first.parallax-window:before {
+				top: 0;
+				height: calc(100vh + 50px);
+			}
 			.parallax-window:hover:before {
 				opacity: 1;
 			}
+
+			
 
 			* {
 				text-transform: none !important;
@@ -151,20 +198,20 @@
 									<ul id="menu-primary-menu" class="menu">
 										<li id="menu-item-639" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-639 mega-menu">
 											<a href="#">
-												portfolio
+												Work
 											</a>
 										</li>
 										<li id="menu-item-640" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-640">
-											<a href="#">
-												about me
+											<a href="https://linkedin.com/in/thejohnsond" target="_blank">
+												Linked In
 											</a>
 										</li>
-										<li id="menu-item-641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-641 mega-menu">
+										<!--<li id="menu-item-641" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-641 mega-menu">
 											<a href="#">
 												lets talk
 											</a>
 										</li>
-										<!-- <li id="menu-item-642" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-642">
+										 <li id="menu-item-642" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-642">
 											<a href="#">
 												blog
 											</a>
@@ -305,88 +352,99 @@
 								<div class="wpb_wrapper">
 									<div class="parallax-showcase-wrapper parallax-classic">
 										<div class="parallax-showcase-item">
-											<img alt="" class="s-img-switch" src="http://w2.themedemo.co/yuk/wp-content/uploads/2018/07/Bitmap.png">
+											<img alt="" class="s-img-switch" src="images/header0.png">
 											<div class="parallax-showcase-content">
-												<div class="title">
-													branding
+												<div class="desc">
+													Oh hey, have we met?
+												</div>
+												<div class="title" style="width: 80vw; line-height: 1.5;">
+													I'm a Visual Problem Solver at <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2764.png">,</br>
+													a Product Designer by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2600.png">,</br>
+													an Entreprenuer by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/1f314.png">.
 												</div>
 												<div class="desc">
-													Ideas is seamlessly integrated into our design process to produce the most effective and engaging work.
-												</div><a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/branding/" target="_self">See more</a>
+													
+												</div>
+												<a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/branding/" target="_self">See more</a>
 											</div>
 										</div>
-										<div class="parallax-showcase-item parallax-window" data-bleed="0" data-image-src="images/tw0flip.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
+										<div class="first parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/tw0flip.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
 											<div class="bg-blind"></div>
 											<div class="parallax-showcase-content">
 												<div class="title">
-													Treatwell
+													Treatwell Marketplace
 												</div>
 												<div class="desc">
-													this is an excellent company! I personally enjoyed the energy and the professional support.
+													Treatwell is the biggest beauty bookings platform in Europe - working with over 30,000 salons in 11 countries and processing 1 million orders per month.
+													</br></br>
+													Currently in my role I spend my time on the mobile website to make Treatwell the best place to manage all of your hair and beauty experiences, as well as building internal tools to help many of our 600 staff day-to-day lives easier. 
 												</div>
-												<a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
+												<!-- <a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
 													See more
-												</a>
+												</a> -->
 											</div>
 										</div>
-										<div class="parallax-showcase-item parallax-window" data-bleed="0" data-image-src="https://cdn.dribbble.com/users/1102843/screenshots/5884403/attachments/1266213/zulusignup.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
+										<div class="parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/zulu0.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
 											<div class="bg-blind"></div>
 											<div class="parallax-showcase-content">
-												<div class="title">
-													Treatwell
+												<div class="title zulu-title">
+													Zulu Web App
 												</div>
 												<div class="desc">
-													this is an excellent company! I personally enjoyed the energy and the professional support.
+													I co-founded, designed and developed a web app and browser extenstion - a collaborative bookmakring tool, born out of the visual limitations of browser bookmarks and lack of sharing and collaborative features.
 												</div>
-												<a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
-													See more
+												<a class="a-btn zulu-btn" href="https://dribbble.com/z2d/projects/1013403-Zulu" target="_blank">
+													View on Dribbble
 												</a>
 											</div>
 										</div>
 										
-										<div class="parallax-showcase-item parallax-window" data-bleed="0" data-image-src="images/twconnect0.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
-												<!-- https://www.treatwell.co.uk/business-info/wp-content/themes/bb-theme-child-tw-v2/img/header-image@2x.jpg -->
-												<div class="bg-blind"></div>
-												<div class="parallax-showcase-content">
-													<div class="title">
-														Treatwell
-													</div>
-													<div class="desc">
-														this is an excellent company! I personally enjoyed the energy and the professional support.
-													</div>
-													<a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
-														See more
-													</a>
+										<div class="parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/pitchup0.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
+											<div class="bg-blind"></div>	
+											<div class="parallax-showcase-content">
+												<div class="title pitchup-title">
+													PitchUp iOS App
 												</div>
+												<div class="desc">
+													Branding and iOS App design for an all-in-one platform designed to ignite a competitive spark into amateur football games and eradite tedious organasational issues.
+												</div>
+												<a class="a-btn pitchup-btn" href="https://dribbble.com/z2d/projects/1015146-PitchUp-App" target="_blank">
+													View on Dribbble
+												</a>
 											</div>
-										<div class="parallax-showcase-item parallax-window" data-bleed="0" data-image-src="images/cs0.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
+										</div>
+
+										<div class="parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/twconnect0.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
+											<!-- https://www.treatwell.co.uk/business-info/wp-content/themes/bb-theme-child-tw-v2/img/header-image@2x.jpg -->
 											<div class="bg-blind"></div>
 											<div class="parallax-showcase-content">
-												<div class="title">
+												<div class="title connect-title">
+													Treatwell Salon Tools
+												</div>
+												<div class="desc">
+													this is an excellent company! I personally enjoyed the energy and the professional support.
+												</div>
+												<a class="a-btn connect-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
+													See more
+												</a>
+											</div>
+										</div>
+
+										<div class="parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/cs0.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
+											<div class="bg-blind"></div>
+											<div class="parallax-showcase-content">
+												<div class="title cs-title">
 													Credit Suisse
 												</div>
 												<div class="desc">
 													this is an excellent company! I personally enjoyed the energy and the professional support.
 												</div>
-												<a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
+												<a class="a-btn cs-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
 													See more
 												</a>
 											</div>
 										</div>
-										<div class="parallax-showcase-item parallax-window" data-bleed="0" data-image-src="images/pitchup0.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
-											<div class="bg-blind"></div>	
-											<div class="parallax-showcase-content">
-												<div class="title">
-													PitchUp iOS App
-												</div>
-												<div class="desc">
-													An all-in-one platform designed to eradite tedious organasational issues, as well as igniting a competitive spark into amateur football games.
-												</div>
-												<a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
-													See more
-												</a>
-											</div>
-										</div>
+										
 										<!-- <div class="parallax-showcase-item">
 											<!--<img src="http://w2.themedemo.co/yuk/wp-content/uploads/2018/06/c8b3c1e230184651b75277531e351ec7d3d30fd7.jpg" alt="" class="s-img-switch">
 											<img alt="PitchUp cover image" class="s-img-switch" src="pitchup0.jpg">
