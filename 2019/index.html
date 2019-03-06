@@ -66,6 +66,9 @@
 
 		<style type="text/css">
 
+			html {
+				scroll-behavior: smooth;
+			}
 			/****************
 			Hover states for projects, button styles
 			*****************/
@@ -165,16 +168,53 @@
 			.desc.finger-down {
 				font-size: 3em !important;
 				position: absolute;
+				animation: MoveUpDown 4s ease-in-out infinite;
+			}
+
+			@keyframes MoveUpDown {
+				0%, 100% {
+					top: 40px;
+				}
+				50% {
+					top: 70px;
+				}
+			}
+			
+			@keyframes MoveUpDownMobile {
+				0%, 100% {
+					bottom: 0;
+				}
+				50% {
+					bottom: 30px;
+				}
+			}
+
+			.desc.intro .emoji {
+				animation: shake 4.5s cubic-bezier(.36,.07,.19,.97) infinite;
+				transform: translate3d(0, 0, 0);
+				backface-visibility: hidden;
+				perspective: 1000px;
+			}
+			@keyframes shake {
+				5%, 10% {
+					transform: translate3d(-1px, 0, 0) rotate(-20deg);
+				}
+				
+				7.5%, 12.5% {
+					transform: translate3d(4px, 0, 0) rotate(20deg);
+				}
+
+				15% {
+					transform: translate3d(0, 0, 0) rotate(0deg);
+				}
 			}
 
 			/****************
 			Resonspive view
 			*****************/
-			@media only screen and (max-width: 600px) {
+			@media only screen and (max-width: 768px) {
 				.desc.intro {
 					font-size: 2em !important;
-					position: absolute;
-					top: 50px;
 				}
 				.title.intro {
 					display: none;
@@ -184,9 +224,10 @@
 					text-align: left !important;
 				}
 				.desc.finger-down {
-					bottom: 50px;
+					bottom: 20px;
 					left: 50%;
 					transform: translateX(-50%);
+					animation: MoveUpDownMobile 4s ease-in-out infinite;
 				}
 				.title.intro.mobile trim {
 					display: none;
@@ -378,7 +419,7 @@
 											<img alt="" class="s-img-switch" src="images/header0.png">
 											<div class="parallax-showcase-content">
 												<div class="desc intro" style="font-size: 1.5em">
-													Oh hey, I'm DJ 👋🏾
+													Oh hey 👋🏾 I'm <b>DJ</b> 
 													<div id="mobile-social" style="display: none;">
 														<i class="fab fa-dribbble"></i>
 														<i class="fab fa-linkedin-in"></i>
@@ -394,13 +435,13 @@
 													<span style="color: #fdaa48">Product Designer</span></br>by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2600.png">,</br>
 													<span style="color: #b8c6cd">Entreprenuer</span></br>by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/1f314.png">.
 												</div>
-												<div class="desc finger-down" style="margin-top: 40px; font-size: 2em">
-													👇🏾
+												<div class="desc finger-down" style="margin-top: 320px; font-size: 2em">
+													<a href="#first-showcase">👇🏾</a>
 												</div>
 												<!-- <a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/branding/" target="_self">See more</a> -->
 											</div>
 										</div>
-										<div class="first parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/tw0flip.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
+										<div id="first-showcase" class="first parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/tw0flip.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
 											<div class="bg-blind"></div>
 											<div class="parallax-showcase-content">
 												<div class="title">
