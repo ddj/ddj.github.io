@@ -65,9 +65,13 @@
 		<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
 
 		<style type="text/css">
+
+			/****************
+			Hover states for projects, button styles
+			*****************/
 			.parallax-window .parallax-showcase-content {
 				opacity: 0;
-				transition: opacity 0.7s ease-in-out;
+				transition: opacity 1s ease-in-out;
 			}
 			.parallax-window:hover .parallax-showcase-content {
 				opacity: 1;
@@ -106,6 +110,13 @@
 				background: #00B0B9 !important;
 			}
 
+			.a-btn {
+				background: transparent !important;
+			}
+			.a-btn:hover {
+				color: white !important;
+			}
+
 			.cs-title {
 				color: #fff !important;
 			}
@@ -115,13 +126,7 @@
 			}
 			.cs-btn:hover {
 				background: #fff !important;
-			}
-
-			.a-btn {
-				background: transparent !important;
-			}
-			.a-btn:hover {
-				color: white !important;
+				color: black !important;
 			}
 
 			.parallax-window:before {
@@ -131,8 +136,7 @@
 				height: 100vh;
 				top: 50px;
 				left: 0;
-				background: rgba(0,0,0,0.6);
-				//background: rgba(255,255,255,0.7);
+				background: rgba(0,0,0,0.7);
 				opacity: 0;
 				transition: opacity 0.7s ease-in-out;
 			}
@@ -144,12 +148,64 @@
 				opacity: 1;
 			}
 
-			
+			.textwidget p {
+				margin-bottom: 10px !important;
+			}
 
 			* {
 				text-transform: none !important;
 			}
+
+			.title.intro, .desc.intro {
+				text-align: left;
+			}
+			.desc.intro {
+				margin-bottom: 25px;
+			}
+			.desc.finger-down {
+				font-size: 3em !important;
+				position: absolute;
+			}
+
+			/****************
+			Resonspive view
+			*****************/
+			@media only screen and (max-width: 600px) {
+				.desc.intro {
+					font-size: 2em !important;
+					position: absolute;
+					top: 50px;
+				}
+				.title.intro {
+					display: none;
+				}
+				.title.intro.mobile {
+					display: block !important;
+					text-align: left !important;
+				}
+				.desc.finger-down {
+					bottom: 50px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.title.intro.mobile trim {
+					display: none;
+				}
+				.header_top_bg {
+					display: none;
+				}
+				#mobile-social {
+					display: block !important;
+				}
+			}
+			@media only screen and (max-width: 350px) {
+				.title.intro.mobile {
+					font-size: 2em !important;
+				}
+			}
 		</style>
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	</head>
 
 	<body class="page-template-default page page-id-4735 woocommerce-no-js  wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
@@ -173,11 +229,12 @@
 							<header class="right-menu classic">
 								<!-- LOGO -->
 								<a href="http://w2.themedemo.co/yuk/" class="logo">
-									<span>yuk</span>
+									<!--<img style="position: absolute; height: 50px; top: 12px" src="https://raw.githubusercontent.com/ddj/ddj.github.io/master/images/djlogowhite.png" />
+									<span>DJ</span>-->
 								</a>
 								<!-- /LOGO -->
 
-								<!-- MOB MENU ICON -->
+								<!-- MOB MENU ICON 
 								<a href="#" class="mob-nav">
 									<div class="hamburger">
 										<i>Menu</i>
@@ -198,7 +255,7 @@
 									<ul id="menu-primary-menu" class="menu">
 										<li id="menu-item-639" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-639 mega-menu">
 											<a href="#">
-												Work
+												Projects
 											</a>
 										</li>
 										<li id="menu-item-640" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-640">
@@ -215,48 +272,13 @@
 											<a href="#">
 												blog
 											</a>
-										</li> -->
+										</li>
 									</ul>
 										
-									<div class="f-right">
-										<div class="mini-cart-wrapper">
-											<a class="yuk-shop-icon ion-bag" href="http://w2.themedemo.co/yuk/cart/" title="view your shopping cart"></a>
-											<div class="yuk_mini_cart">
-												<ul class="cart_list product_list_widget">
-													<li class="empty">No products in the cart.</li>
-												</ul><!-- end product list -->
-												<div class="yuk-buttons">
-													<a href="http://w2.themedemo.co/yuk/cart/">Go to cart<i class="fa fa-arrow-right"></i></a>
-													<p class="woocommerce-mini-cart__total total">Total : <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>0</span></p>
-												</div>
-											</div>
-										</div>
-										<div class="search-icon-wrapper">
-											<i class="ion-android-search open-search"></i>
-											<div class="site-search" id="search-box">
-												<div class="close-search">
-													<span class="line"></span> <span class="line"></span>
-												</div>
-												<div class="form-container">
-													<div class="container">
-														<div class="row">
-															<div class="col-lg-12">
-																<form action="http://w2.themedemo.co/yuk/" class="search-form" method="get" role="search">
-																	<div class="input-group">
-																		<input class="search-field" name="s" placeholder="type for search" required="" type="search" value="">
-																	</div>
-																</form>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
 								</nav>	
 								<!-- NAVIGATION -->
 
-								<!-- ABOUT SECTION-->
+								<!-- ABOUT SECTION
 								<div class="about-mob-section-wrap">
 									<div class="about-hamburger">
 										<span class="line"></span>
@@ -266,7 +288,8 @@
 									<div class="mobile-about-section">
 										<div class="about-section-inner">
 											<div class="about-text-wrap">
-												<h2>yuk</h2>
+												<img style="height: 50px;" src="https://raw.githubusercontent.com/ddj/ddj.github.io/master/images/djlogowhite.png" />
+									
 												<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
 											</div>
 											<div class="about-gallery-wrap">
@@ -354,18 +377,27 @@
 										<div class="parallax-showcase-item">
 											<img alt="" class="s-img-switch" src="images/header0.png">
 											<div class="parallax-showcase-content">
-												<div class="desc">
-													Oh hey, have we met?
+												<div class="desc intro" style="font-size: 1.5em">
+													Oh hey, I'm DJ 👋🏾
+													<div id="mobile-social" style="display: none;">
+														<i class="fab fa-dribbble"></i>
+														<i class="fab fa-linkedin-in"></i>
+													</div>
 												</div>
-												<div class="title" style="width: 80vw; line-height: 1.5;">
-													I'm a Visual Problem Solver at <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2764.png">,</br>
-													a Product Designer by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2600.png">,</br>
-													an Entreprenuer by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/1f314.png">.
+												<div class="title intro" style="width: 80vw; line-height: 1.5;">
+													<trim>I'm a </trim><span style="color: #b82038">Visual Problem Solver</span> at <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2764.png">,</br>
+													<trim>a </trim><span style="color: #fdaa48">Product Designer</span> by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2600.png">,</br>
+													<trim>an </trim><span style="color: #b8c6cd">Entreprenuer</span> by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/1f314.png">.
 												</div>
-												<div class="desc">
-													
+												<div class="title intro mobile" style="width: 80vw; line-height: 1.5; display: none;">
+													<span style="color: #b82038">Visual Problem Solver</span> at <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2764.png">,</br>
+													<span style="color: #fdaa48">Product Designer</span></br>by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2600.png">,</br>
+													<span style="color: #b8c6cd">Entreprenuer</span></br>by <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/1f314.png">.
 												</div>
-												<a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/branding/" target="_self">See more</a>
+												<div class="desc finger-down" style="margin-top: 40px; font-size: 2em">
+													👇🏾
+												</div>
+												<!-- <a class="a-btn" href="http://w2.themedemo.co/yuk/portfolio-item/branding/" target="_self">See more</a> -->
 											</div>
 										</div>
 										<div class="first parallax-showcase-item parallax-window" data-bleed="50" data-image-src="images/tw0flip.png" data-overscrollfix="true" data-parallax="scroll" data-position-y="top">
@@ -374,7 +406,7 @@
 												<div class="title">
 													Treatwell Marketplace
 												</div>
-												<div class="desc">
+												<div class="desc" style="min-width: 50vw;">
 													Treatwell is the biggest beauty bookings platform in Europe - working with over 30,000 salons in 11 countries and processing 1 million orders per month.
 													</br></br>
 													Currently in my role I spend my time on the mobile website to make Treatwell the best place to manage all of your hair and beauty experiences, as well as building internal tools to help many of our 600 staff day-to-day lives easier. 
@@ -391,7 +423,7 @@
 													Zulu Web App
 												</div>
 												<div class="desc">
-													I co-founded, designed and developed a web app and browser extenstion - a collaborative bookmakring tool, born out of the visual limitations of browser bookmarks and lack of sharing and collaborative features.
+													I co-founded, designed and developed a web app and browser extension - a collaborative bookmarking tool, born out of the visual limitations of browser bookmarks and lack of sharing and collaborative features.
 												</div>
 												<a class="a-btn zulu-btn" href="https://dribbble.com/z2d/projects/1013403-Zulu" target="_blank">
 													View on Dribbble
@@ -422,10 +454,10 @@
 													Treatwell Salon Tools
 												</div>
 												<div class="desc">
-													this is an excellent company! I personally enjoyed the energy and the professional support.
+													During my time working on the salon software for treatwell, I designed and prototyped a new salon marketing and CRM tool. This was part of a Minimum Viable Experiment we tried to bring incremental value as early as possible to our end users.
 												</div>
-												<a class="a-btn connect-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
-													See more
+												<a class="a-btn connect-btn" href="https://treatwell.engineering/5-product-learnings-from-running-test-projects-at-treatwell-inspired-by-jamconf2018-2a94276b371d" target="_blank">
+													View experiment designs
 												</a>
 											</div>
 										</div>
@@ -437,10 +469,10 @@
 													Credit Suisse
 												</div>
 												<div class="desc">
-													this is an excellent company! I personally enjoyed the energy and the professional support.
+													I worked on a bank wide initiative to reimagine the front door of Credit Suisse: ensuring all products have the same authentication experience whilst also bringing the brand and said products to life.
 												</div>
-												<a class="a-btn cs-btn" href="http://w2.themedemo.co/yuk/portfolio-item/photography/" target="_self">
-													See more
+												<a class="a-btn cs-btn" href="https://id.credit-suisse.com" target="_blank">
+													View live site
 												</a>
 											</div>
 										</div>
@@ -468,16 +500,91 @@
 		</div>
 
 		<!-- Footer -->
-		<footer id="footer" class="modern  ">
-			<div class="footer-bottom-wrap no-widgets">
-				<div class="container-fluid">
-					<div class="row flex-wrap">
-						<div class="copyright col-12 text-center col-sm-6 col-md-12">
-							© Yuk Studio 2018. All Right Reserved.
+		<footer class="modern" id="footer">
+			<div class="container-fluid">
+				<div class="widg clearfix" style="position: relative; height: 351px;">
+					<div class="sidebar-item col-xs-12 col-sm-12 col-md-12 col-lg-4 widget_text" id="text-2" style="position: absolute; left: 0px; top: 0px;">
+						<div class="item-wrap">
+							<div class="textwidget">
+								<h3 class="big-text">
+									Thanks for scrolling by &amp; have a good 
+									<img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/2600.png"> / <img class="emoji twitter" src="https://abs.twimg.com/emoji/v1/72x72/1f314.png">
+								</h3>
+							</div>
 						</div>
 					</div>
+					<div class="sidebar-item col-xs-12 col-sm-12 col-md-12 col-lg-4 widget_text" id="text-3" style="position: absolute; left: 221px; top: 0px; display: inline-block !important">
+						<div class="item-wrap" style="text-align: center">
+							<h5>Say hello</h5>
+							<div class="textwidget">
+								<p><a href="mailto:dj@davidjohnson.design">dj@davidjohnson.design</a></p>
+								<!-- <p><a href="tel:68120034509">(+68) 120034509</a></p> -->
+							</div>
+						</div>
+					</div>
+					<div class="sidebar-item col-xs-12 col-sm-12 col-md-12 col-lg-4 widget_text" id="text-3" style="position: absolute; left: 221px; top: 0px; display: inline-block !important">
+						<div class="item-wrap" style="text-align: center">
+							<h5>Links</h5>
+							<div class="textwidget">
+								<p><a href="https://linkedin.com/in/thejohnsond"><i class="fab fa-linkedin-in"></i> LinkedIn</a></p>
+								<p><a href="https://dribbble.com/itsdj"><i class="fab fa-dribbble"></i> Dribbble</a></p>
+							</div>
+						</div>
+					</div>
+					<!-- <div class="sidebar-item col-xs-12 col-sm-12 col-md-12 col-lg-4 widget_nav_menu" id="nav_menu-2" style="position: absolute; left: 442px; top: 0px;">
+						<div class="item-wrap">
+							<h5>Links</h5>
+							<div class="menu-footer-menu-container">
+								<ul class="menu" id="menu-footer-menu">
+									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1342" id="menu-item-1342">
+										<a href="http://w2.themedemo.co/yuk/about/">About us</a>
+									</li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1345" id="menu-item-1345">
+										<a href="http://w2.themedemo.co/yuk/contact-me/">Contact me</a>
+									</li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1346" id="menu-item-1346">
+										<a href="http://w2.themedemo.co/yuk/main-home/">Main Home</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar-item col-xs-12 col-sm-12 col-md-12 col-lg-3 YukRecentPost" id="yuk_recent_post_widget-2" style="position: absolute; left: 663px; top: 0px;">
+						<div class="item-wrap">
+							<div class="yuk-recent-post-widget">
+								<h5 class="about_content">From our blog</h5>
+								<div class="recent-block">
+									<div class="recent-img s-back-switch" style="background-image: url(&quot;http://w2.themedemo.co/yuk/wp-content/uploads/2018/06/img@3x-28.jpg&quot;);"><img alt="" class="s-img-switch" src="http://w2.themedemo.co/yuk/wp-content/uploads/2018/06/img@3x-28.jpg" style="display: none;"></div>
+									<div class="flex-wrap">
+										<div class="recent-text">
+											<a href="http://w2.themedemo.co/yuk/video-games-playing-with-imagination-3/">video games playing with imagination</a>
+										</div>
+										<div class="recent-date">
+											June 25, 2018
+										</div>
+									</div>
+								</div>
+								<div class="recent-block">
+									<div class="recent-img s-back-switch" style="background-image: url(&quot;http://w2.themedemo.co/yuk/wp-content/uploads/2018/06/img@3x-29.jpg&quot;);"><img alt="" class="s-img-switch" src="http://w2.themedemo.co/yuk/wp-content/uploads/2018/06/img@3x-29.jpg" style="display: none;"></div>
+									<div class="flex-wrap">
+										<div class="recent-text">
+											<a href="http://w2.themedemo.co/yuk/steps-in-installing-rack-mount-lcd-monitors-3/">steps in installing rack mount lcd monitors</a>
+										</div>
+										<div class="recent-date">
+											June 25, 2018
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
 				</div>
 			</div>
+			<!-- <div class="footer-bottom-wrap">
+				<div class="container-fluid">
+					<div class="row flex-wrap"></div>
+				</div>
+			</div> -->
 		</footer>
 
 		<div class="fullview">
