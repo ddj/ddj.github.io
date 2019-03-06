@@ -1,0 +1,193 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/****************
+Hover states for projects, button styles
+*****************/
+.parallax-window .parallax-showcase-content {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.parallax-window:hover .parallax-showcase-content {
+    opacity: 1;
+}
+
+.zulu-title {
+    color: #00c9ca !important;
+}
+.zulu-btn {
+    border: 2px solid #00c9ca !important;
+    color: #00c9ca !important;
+}
+.zulu-btn:hover {
+    background: #00c9ca !important;
+}
+
+.pitchup-title {
+    color: #ff8a12 !important;
+}
+.pitchup-btn {
+    border: 2px solid #ff8a12 !important;
+    color: #ff8a12 !important;
+}
+.pitchup-btn:hover {
+    background: #ff8a12 !important;
+}
+
+.connect-title {
+    color: #00B0B9 !important;
+}
+.connect-btn {
+    border: 2px solid #00B0B9 !important;
+    color: #00B0B9 !important;
+}
+.connect-btn:hover {
+    background: #00B0B9 !important;
+}
+
+.a-btn {
+    background: transparent !important;
+}
+.a-btn:hover {
+    color: white !important;
+}
+
+.cs-title {
+    color: #fff !important;
+}
+.cs-btn {
+    border: 2px solid #fff !important;
+    color: #fff !important;
+}
+.cs-btn:hover {
+    background: #fff !important;
+    color: black !important;
+}
+
+.parallax-window:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 50px;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+.first.parallax-window:before {
+    top: 0;
+    height: calc(100vh + 50px);
+}
+.parallax-window:hover:before, .parallax-window:focus:before {
+    opacity: 1;
+}
+
+.textwidget p {
+    margin-bottom: 10px !important;
+}
+
+* {
+    text-transform: none !important;
+}
+
+.title.intro, .desc.intro {
+    text-align: left;
+}
+.desc.intro {
+    margin-bottom: 25px;
+}
+.desc.finger-down {
+    font-size: 3em !important;
+    position: absolute;
+    animation: MoveUpDown 4s ease-in-out infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        top: 40px;
+    }
+    50% {
+        top: 70px;
+    }
+}
+
+@keyframes MoveUpDownMobile {
+    0%, 100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 30px;
+    }
+}
+
+.desc.intro .emoji {
+    animation: shake 4.5s cubic-bezier(.36,.07,.19,.97) infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+@keyframes shake {
+    5%, 10% {
+        transform: translate3d(-1px, 0, 0) rotate(-20deg);
+    }
+    
+    7.5%, 12.5% {
+        transform: translate3d(4px, 0, 0) rotate(20deg);
+    }
+
+    15% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+/****************
+Resonspive view
+*****************/
+@media only screen and (max-width: 768px) {
+    .desc.intro {
+        font-size: 2em !important;
+    }
+    .title.intro {
+        display: none;
+    }
+    .title.intro.mobile {
+        display: block !important;
+        text-align: left !important;
+    }
+    .desc.finger-down {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: MoveUpDownMobile 4s ease-in-out infinite;
+    }
+    .title.intro.mobile trim {
+        display: none;
+    }
+    .header_top_bg {
+        display: none;
+    }
+    #mobile-social {
+        display: block !important;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .title.intro.mobile {
+        font-size: 2em !important;
+    }
+}
+
+
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
