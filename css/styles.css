@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+#menu-primary-menu li a {
+    color: #222222 !important;
+}
+
 /****************
 Hover states for projects, button styles
 *****************/
@@ -64,6 +68,11 @@ Hover states for projects, button styles
     background: #fff !important;
     color: black !important;
 }
+
+.second-btn {
+    margin-left: 16px;
+}
+
 
 .parallax-window:before {
     content: '';
@@ -172,6 +181,13 @@ Resonspive view
         display: block !important;
     }
 }
+
+@media only screen and (max-width: 450px) {
+    .second-btn {
+        margin-left: 0px;
+    }
+}
+
 @media only screen and (max-width: 350px) {
     .title.intro.mobile {
         font-size: 2em !important;
