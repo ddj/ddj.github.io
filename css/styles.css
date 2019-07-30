@@ -6,6 +6,11 @@ html {
     color: #222222 !important;
 }
 
+@font-face {
+    font-family: lg;
+    src: url(../fonts/lg.woff);
+}
+
 /****************
 Hover states for projects, button styles
 *****************/
