@@ -21,6 +21,17 @@ Hover states for projects, button styles
 .parallax-window:hover .parallax-showcase-content {
     opacity: 1;
 }
+.ztd-title {
+    color: #EB0053 !important;
+}
+.ztd-btn {
+    border: 2px solid #EB0053 !important;
+    color: #EB0053 !important;
+    background: #EB0053 !important;
+}
+.ztd-btn:hover {
+    background: #EB0053 !important;
+}
 
 .zulu-title {
     color: #00c9ca !important;
@@ -28,6 +39,7 @@ Hover states for projects, button styles
 .zulu-btn {
     border: 2px solid #00c9ca !important;
     color: #00c9ca !important;
+    background: #00c9ca !important;
 }
 .zulu-btn:hover {
     background: #00c9ca !important;
@@ -39,6 +51,7 @@ Hover states for projects, button styles
 .pitchup-btn {
     border: 2px solid #ff8a12 !important;
     color: #ff8a12 !important;
+    background: #ff8a12 !important;
 }
 .pitchup-btn:hover {
     background: #ff8a12 !important;
@@ -50,13 +63,15 @@ Hover states for projects, button styles
 .connect-btn {
     border: 2px solid #00B0B9 !important;
     color: #00B0B9 !important;
+    background: #00B0B9 !important;
 }
 .connect-btn:hover {
     background: #00B0B9 !important;
 }
 
 .a-btn {
-    background: transparent !important;
+    /* background: transparent !important; */
+    color: white !important;
 }
 .a-btn:hover {
     color: white !important;
@@ -68,6 +83,8 @@ Hover states for projects, button styles
 .cs-btn {
     border: 2px solid #fff !important;
     color: #fff !important;
+    background: #fff !important;
+    color: black !important;
 }
 .cs-btn:hover {
     background: #fff !important;
