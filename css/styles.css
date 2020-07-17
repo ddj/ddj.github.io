@@ -72,6 +72,7 @@ Hover states for projects, button styles
 .a-btn {
     /* background: transparent !important; */
     color: white !important;
+    border-radius: 100px !important;
 }
 .a-btn:hover {
     color: white !important;
